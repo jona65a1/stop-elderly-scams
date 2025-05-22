@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Ældresvindel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        .nav-link {
+            font-family: 'Inter', sans-serif;
+        }
+        .headline {
+            font-family: 'Inter', sans-serif;
+        }
+        .body-text {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-title {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-title {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-text {
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary {
+            font-family: 'Inter', sans-serif;
+        }
+        .footer-text {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .tips {
+            background: #eaf2f8;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-bubble {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .tip-bubble:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-indigo-500 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">
+            <a href="#" class="nav-link">Stop Ældresvindel</a>
+        </div>
+        <nav class="mr-4">
+            <ul class="flex space-x-4">
+                <li><a href="#about" class="nav-link hover:text-indigo-300 transition duration-300">Om</a></li>
+                <li><a href="#tips" class="nav-link hover:text-indigo-300 transition duration-300">Sikkerhedstips</a></li>
+                <li><a href="#resources" class="nav-link hover:text-indigo-300 transition duration-300">Ressourcer</a></li>
+                <li><a href="#contact" class="nav-link hover:text-indigo-300 transition duration-300">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bg-indigo-100 text-gray-800 text-center py-20 px-4 rounded-md">
+        <h1 class="headline text-3xl font-bold mb-4">Beskyt Vores Seniorer: Stop Svindlen</h1>
+        <p class="body-text text-lg mb-8">
+            Ældresvindel er et voksende problem, men sammen kan vi bekæmpe det. Lær hvordan du genkender, forebygger og anmelder disse svindelnumre.
+        </p>
+        <a href="#common-scams" class="btn-primary bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300">Lær Mere</a>
+    </section>
+
+    <section id="about" class="container py-16 px-4">
+        <h2 class="section-title text-2xl font-semibold text-gray-800 text-center mb-8">Om Os</h2>
+        <p class="body-text text-lg text-gray-700">Svindel rettet mod ældre er et voksende problem. Svindlere udnytter ofte de ældres sårbarhed ved hjælp af taktikker som falsk teknisk support, lotterigevinster eller hastende opkald fra falske familiemedlemmer. Vores mål er at uddanne og styrke de ældre og deres pårørende til at genkende og forhindre disse svindelnumre.</p>
+    </section>
+
+    <section id="common-scams" class="container py-16 px-4">
+        <h2 class="section-title text-2xl font-semibold text-gray-800 text-center mb-8">Almindelige Svindelnumre Mod Seniorer</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">Bedsteforældresvindel</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Svindlere udgiver sig for at være et barnebarn i problemer, der beder om hurtige penge.
+                </p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Hasteanmodning om kontanter</li>
+                    <li>Pres for at handle hurtigt</li>
+                    <li>Anmodning om at holde det hemmeligt</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">Teknisk Supportsvindel</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Svindlere påstår at være teknisk support og beder om fjernadgang til din computer.
+                </p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Uopfordrede opkald eller pop-ups</li>
+                    <li>Anmodninger om fjernadgang</li>
+                    <li>Påstande om akutte computerproblemer</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">Romancesvindel</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Svindlere opretter falske online profiler for at opbygge forhold og derefter bede om penge.
+                </p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Hurtig tilståelse af kærlighed</li>
+                    <li>Afviser at mødes personligt</li>
+                    <li>Beder om økonomisk hjælp</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">Lotteri/Præmiesvindel</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Svindlere hævder, at du har vundet et lotteri eller en præmie, men skal betale gebyrer for at indsamle.
+                </p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Uventet præmiebesked</li>
+                    <li>Anmodning om forudbetaling</li>
+                    <li>Pres for at handle hurtigt</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">Svindel med IRS-personificering</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Svindlere udgiver sig for at være fra IRS og truer med arrestation, hvis du ikke betaler skat.
+                </p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Trusler om arrestation eller retssag</li>
+                    <li>Krav om øjeblikkelig betaling</li>
+                    <li>Anmodning om personlige økonomiske oplysninger</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">Svindel med Boligreparationer</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Svindlere tilbyder boligreparationstjenester, tager et stort depositum og færdiggør aldrig arbejdet.
+                </p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Uopfordrede tilbud</li>
+                    <li>Krav om stor forudbetaling</li>
+                    <li>Vage eller ingen kontrakter</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips" class="bg-indigo-100 py-16 px-4 rounded-md">
+        <div class="container mx-auto">
+            <h2 class="section-title text-2xl font-semibold text-indigo-700 text-center mb-8">Top Sikkerhedstips</h2>
+            <div class="space-y-4">
+                <div class="tip-bubble">Del aldrig personlige eller økonomiske oplysninger over telefonen eller e-mail.</div>
+                <div class="tip-bubble">Bekræft identiteten af opkaldere, der hævder at være familie eller embedsmænd.</div>
+                <div class="tip-bubble">Læg på ved mistænkelige opkald - føl dig ikke presset til at svare.</div>
+                <div class="tip-bubble">Brug stærke adgangskoder og aktiver tofaktorautentificering.</div>
+                <div class="tip-bubble">Rådfør dig med et betroet familiemedlem, før du træffer økonomiske beslutninger.</div>
+                <div class="tip-bubble">Vær forsigtig med uopfordret kontakt.</div>
+                <div class="tip-bubble">Modstå pres for at handle hurtigt.</div>
+                <div class="tip-bubble">Bekræft anmodninger om penge.</div>
+                <div class="tip-bubble">Del ikke personlige oplysninger.</div>
+                <div class="tip-bubble">Vær forsigtig med betalingsmetoder.</div>
+                <div class="tip-bubble">Hold din computer sikker.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="container mx-auto py-16 px-4">
+        <h2 class="section-title text-2xl font-semibold text-gray-800 text-center mb-8">Ressourcer</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">National Elder Fraud Hotline</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Giver assistance og ressourcer til anmeldelse af ældresvindel.
+                </p>
+                <a href="https://ovc.ojp.gov/program/elder-fraud-abuse/related-resources" target="_blank" rel="noopener noreferrer" class="btn-primary bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 text-center">Besøg Hjemmeside</a>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">Federal Trade Commission (FTC)</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Tilbyder information om svindel og hvordan man anmelder det.
+                </p>
+                <a href="https://www.ftc.gov/" target="_blank" rel="noopener noreferrer" class="btn-primary bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 text-center">Besøg Hjemmeside</a>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-xl font-semibold text-indigo-600 mb-4">National Council on Aging (NCOA)</h3>
+                <p class="card-text text-gray-700 mb-4">
+                    Tilbyder ressourcer og information til at hjælpe seniorer med at undgå svindel.
+                </p>
+                <a href="https://www.ncoa.org/older-adults/money/management/avoiding-scams/" target="_blank" rel="noopener noreferrer" class="btn-primary bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 text-center">Besøg Hjemmeside</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-indigo-100 py-16 px-4 rounded-md">
+        <div class="container mx-auto text-center">
+            <h2 class="section-title text-2xl font-semibold text-indigo-700 mb-8">Kontakt Os</h2>
+            <form>
+                <label for="name" class="block text-gray-700 text-sm font-bold mb-2 text-left">Navn:</label>
+                <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2 text-left">Email:</label>
+                <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+
+                <label for="message" class="block text-gray-700 text-sm font-bold mb-2 text-left">Besked:</label>
+                <textarea id="message" name="message" rows="5" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+
+                <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send Besked</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p class="footer-text text-md">
+            © 2025 Stop Ældresvindel. Alle rettigheder forbeholdes.
+        </p>
+    </footer>
+</body>
+</html>
